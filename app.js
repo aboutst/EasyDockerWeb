@@ -40,6 +40,7 @@ app.use((req, res, next) => {
     logger.info(`[${req.method}] ${req.originalUrl}`);
     next();
 });
+
 app.use(publicRoute);
 app.use(verifyToken);
 app.use(privateRoute);

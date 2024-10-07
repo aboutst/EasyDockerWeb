@@ -11,13 +11,14 @@ const returnContainersRouter = (io) => {
             res.locals.formatName = (str) => {
                 return str[0].split('/')[1];
             };
-            docker.listImages(null, (err, listImages) => {
-                res.render('containers',
-                    {
-                        containers: containers,
-                        images: listImages
-                    });
-            });
+            return res.json({success: true, data: containers});
+            // docker.listImages(null, (err, listImages) => {
+            //     res.render('containers',
+            //         {
+            //             containers: containers,
+            //             images: listImages
+            //         });
+            // });
         });
     });
 

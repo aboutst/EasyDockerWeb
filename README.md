@@ -122,12 +122,6 @@ docker run -d \
 ### Overview Dashboard
 ![overview](./images/overview.png)
 
-### Container Management
-![containers](./images/containers.png)
-
-### Create Container
-![newContainer](./images/newContainer.png)
-
 ### Image Management
 ![images](./images/images.png)
 

@@ -2,6 +2,7 @@
   "name": "easy-docker-web",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@10.17.1",
   "scripts": {
     "start": "nodemon ./bin/www"
   },
@@ -16,5 +17,12 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "cpu-features",
+      "protobufjs",
+      "ssh2"
+    ]
   }
 }

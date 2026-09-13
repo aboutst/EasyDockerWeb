@@ -9,9 +9,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone
 
 # 安装基础工具、pnpm 和 docker
+# pnpm 版本由 package.json 的 packageManager 字段固定，避免浮动版本导致构建漂移
 RUN apk add --no-cache bash tzdata docker-cli && \
-    corepack enable && \
-    corepack prepare pnpm@latest --activate
+    corepack enable
 
 # 复制 package.json 和 pnpm-lock.yaml (如果存在)
 COPY package.json pnpm-lock.yaml* ./
